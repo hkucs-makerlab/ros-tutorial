@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="robomaster_base" name="listener" type="listener" output="screen" />
+    <node pkg="robomaster_base" name="talker" type="talker" output="screen" />
+    <node pkg="robomaster_base" name="add_two_ints_server" type="add_two_ints_server" output="screen" />
+</launch>

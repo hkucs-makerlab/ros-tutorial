@@ -1,0 +1,14 @@
+<launch>
+    <rosparam file="$(find robomaster_base)/param/global.yaml" />
+    <node pkg="robomaster_base" name="listener_node" type="listener" output="screen">
+        <rosparam file="$(find robomaster_base)/param/listener.yaml" />
+        <remap from="chatter" to="/talker_node/chatter"/>    
+    </node>
+    <node pkg="robomaster_base" name="talker_node" type="talker" output="screen">
+        <rosparam file="$(find robomaster_base)/param/talker.yaml" />
+   
+    </node>
+    <node pkg="robomaster_base" name="add_two_ints_server" type="add_two_ints_server" output="screen">
+        <rosparam file="$(find robomaster_base)/param/add_two_ints_server.yaml" />
+    </node>
+</launch>
